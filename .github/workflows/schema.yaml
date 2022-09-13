@@ -1,6 +1,10 @@
 name: JSON Schema
 
 on:
+  workflow_run:
+    workflows: ["License Checking", "Code Lint", "Test"]
+    types:
+      - completed
   push:
     branches:
       - main
