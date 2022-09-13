@@ -42,7 +42,7 @@ import (
 // HTTP implements a config for HTTP.
 type HTTP struct {
 	base.DefaultProbe `yaml:",inline"`
-	URL               string            `yaml:"url" json:"url" jsonschema:"format=uri,title=HTTP URL,description=HTTP URL to probe"`
+	URL               string            `yaml:"url" json:"url" jsonschema:"format=uri,title=HTTP URL,description=HTTP URL to probe(test)"`
 	Proxy             string            `yaml:"proxy" json:"proxy,omitempty" jsonschema:"format=url,title=Proxy Server,description=proxy to use for HTTP requests"`
 	ContentEncoding   string            `yaml:"content_encoding,omitempty" json:"content_encoding,omitempty" jsonschema:"title=Content Encoding,description=content encoding to use for HTTP requests"`
 	Method            string            `yaml:"method,omitempty" json:"method,omitempty" jsonschema:"enum=GET,enum=POST,enum=DELETE,enum=PUT,enum=HEAD,enum=OPTIONS,enum=PATCH,enum=TRACE,enum=CONNECT,title=HTTP Method,description=HTTP method to use for HTTP requests"`
